@@ -67,3 +67,8 @@ After pushing to GitHub, Railway will:
 4. Provide the live URL
 
 Your EMF hoodie e-commerce platform will be live at: `https://your-project-name.railway.app`
+
+## Updated Configuration (June 2025)
+✅ Added explicit buildCommand in railway.json
+✅ STRIPE_SECRET_KEY environment variable configured
+✅ Build process tested and working locally
