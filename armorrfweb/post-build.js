@@ -7,37 +7,28 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Copy files from dist/public to dist for deployment
-const sourceDir = path.join(__dirname, 'dist', 'public');
-const targetDir = path.join(__dirname, 'dist');
+// Ensure proper structure for Railway deployment
+const publicDir = path.join(__dirname, 'dist', 'public');
+const serverFile = path.join(__dirname, 'dist', 'index.js');
 
-if (fs.existsSync(sourceDir)) {
-  console.log('Preparing deployment structure...');
-  
-  // Copy all files from dist/public to dist
-  const files = fs.readdirSync(sourceDir);
-  
-  files.forEach(file => {
-    const sourcePath = path.join(sourceDir, file);
-    const targetPath = path.join(targetDir, file);
-    
-    // Skip if file already exists in target (avoid overwriting server files)
-    if (fs.existsSync(targetPath)) {
-      return;
-    }
-    
-    if (fs.statSync(sourcePath).isDirectory()) {
-      // Copy directory recursively
-      fs.cpSync(sourcePath, targetPath, { recursive: true });
-    } else {
-      // Copy file
-      fs.copyFileSync(sourcePath, targetPath);
-    }
-  });
-  
+if (fs.existsSync(publicDir) && fs.existsSync(serverFile)) {
   console.log('✓ Deployment structure ready');
-  console.log('✓ Static files available in dist/');
+  console.log('✓ Static files available in dist/public/');
   console.log('✓ Server bundle available at dist/index.js');
+  
+  // Verify index.html exists
+  const indexHtml = path.join(publicDir, 'index.html');
+  if (fs.existsSync(indexHtml)) {
+    console.log('✓ index.html found in dist/public/');
+  } else {
+    console.log('⚠ Warning: index.html not found in dist/public/');
+  }
 } else {
-  console.log('No dist/public directory found, skipping static file copy');
+  if (!fs.existsSync(publicDir)) {
+    console.log('❌ Error: dist/public directory not found');
+  }
+  if (!fs.existsSync(serverFile)) {
+    console.log('❌ Error: dist/index.js not found');
+  }
+  process.exit(1);
 }
