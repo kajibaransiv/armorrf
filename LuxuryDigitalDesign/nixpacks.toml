@@ -1,0 +1,18 @@
+[variables]
+NODE_ENV = "production"
+
+[phases.setup]
+nixPkgs = ['nodejs-18_x']
+
+[phases.install]
+cmds = ['npm ci --production=false --no-audit --no-fund --legacy-peer-deps']
+
+[phases.build]
+cmds = [
+  'npm run build',
+  'node build-server.js',
+  'node post-build.js'
+]
+
+[start]
+cmd = 'node start-railway.js'

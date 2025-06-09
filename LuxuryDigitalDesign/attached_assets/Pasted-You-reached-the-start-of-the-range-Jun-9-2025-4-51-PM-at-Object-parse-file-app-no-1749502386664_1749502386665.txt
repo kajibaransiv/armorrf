@@ -1,0 +1,113 @@
+You reached the start of the range → Jun 9, 2025 4:51 PM
+
+ 
+
+    at Object.parse (file:///app/node_modules/@neondatabase/serverless/index.mjs:841:225)
+
+TypeError [ERR_INVALID_ARG_TYPE]: The "paths[0]" argument must be of type string. Received undefined
+
+    at parse (file:///app/node_modules/@neondatabase/serverless/index.mjs:848:1)
+
+    at new NodeError (node:internal/errors:405:5)
+
+    at new ConnectionParameters (file:///app/node_modules/@neondatabase/serverless/index.mjs:869:23)
+
+    at validateString (node:internal/validators:162:11)
+
+    at new Client (file:///app/node_modules/@neondatabase/serverless/index.mjs:1226:35)
+
+    at Object.resolve (node:path:1097:7)
+
+    at new NeonClient (file:///app/node_modules/@neondatabase/serverless/index.mjs:1570:121)
+
+    at file:///app/dist/index.js:581:17
+
+    at Cn.newClient (file:///app/node_modules/@neondatabase/serverless/index.mjs:1378:74)
+
+    at ModuleJob.run (node:internal/modules/esm/module_job:195:25)
+
+    at Cn.connect (file:///app/node_modules/@neondatabase/serverless/index.mjs:1378:23)
+
+    at async ModuleLoader.import (node:internal/modules/esm/loader:337:24)
+
+    at async loadESM (node:internal/process/esm_loader:34:7)
+
+    at Cn.query (file:///app/node_modules/@neondatabase/serverless/index.mjs:1407:63) {
+
+    at async handleMainPromise (node:internal/modules/run_main:106:12) {
+
+  input: '<your-postgresql-url>',
+
+  code: 'ERR_INVALID_ARG_TYPE'
+
+  code: 'ERR_INVALID_URL'
+
+}
+
+}
+
+ 
+
+Node.js v18.20.5
+
+Failed to initialize products: TypeError [ERR_INVALID_URL]: Invalid URL
+
+    at new NodeError (node:internal/errors:405:5)
+
+    at new URL (node:internal/url:676:13)
+
+    at Object.parse (file:///app/node_modules/@neondatabase/serverless/index.mjs:841:225)
+
+    at parse (file:///app/node_modules/@neondatabase/serverless/index.mjs:848:1)
+
+    at new ConnectionParameters (file:///app/node_modules/@neondatabase/serverless/index.mjs:869:23)
+
+    at new Client (file:///app/node_modules/@neondatabase/serverless/index.mjs:1226:35)
+
+    at new NeonClient (file:///app/node_modules/@neondatabase/serverless/index.mjs:1570:121)
+
+    at Cn.newClient (file:///app/node_modules/@neondatabase/serverless/index.mjs:1378:74)
+
+    at Cn.connect (file:///app/node_modules/@neondatabase/serverless/index.mjs:1378:23)
+
+    at Cn.query (file:///app/node_modules/@neondatabase/serverless/index.mjs:1407:63) {
+
+  input: '<your-postgresql-url>',
+
+  code: 'ERR_INVALID_URL'
+
+}
+
+node:internal/errors:496
+
+    ErrorCaptureStackTrace(err);
+
+    ^
+
+ 
+
+TypeError [ERR_INVALID_ARG_TYPE]: The "paths[0]" argument must be of type string. Received undefined
+
+    at new NodeError (node:internal/errors:405:5)
+
+    at validateString (node:internal/validators:162:11)
+
+    at Object.resolve (node:path:1097:7)
+
+    at file:///app/dist/index.js:581:17
+
+    at ModuleJob.run (node:internal/modules/esm/module_job:195:25)
+
+    at async ModuleLoader.import (node:internal/modules/esm/loader:337:24)
+
+    at async loadESM (node:internal/process/esm_loader:34:7)
+
+    at async handleMainPromise (node:internal/modules/run_main:106:12) {
+
+  code: 'ERR_INVALID_ARG_TYPE'
+
+}
+
+ 
+
+Node.js v18.20.5

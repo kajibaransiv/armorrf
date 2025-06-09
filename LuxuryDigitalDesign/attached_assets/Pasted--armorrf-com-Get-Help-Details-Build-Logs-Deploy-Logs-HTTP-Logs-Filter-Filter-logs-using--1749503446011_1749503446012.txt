@@ -1,0 +1,112 @@
+
+armorrf.com
+Get Help
+
+Details
+Build Logs
+Deploy Logs
+HTTP Logs
+
+Filter
+Filter logs using "", (), AND, OR, -
+
+
+
+You reached the start of the range → Jun 9, 2025 4:59 PM
+
+ 
+
+[Region: us-east4]
+
+==============
+
+Using Nixpacks
+
+==============
+
+
+context: c9wq-1Wxg
+
+Using subdirectory "armorrfweb"
+
+╔═════════════════════ Nixpacks v1.38.0 ═════════════════════╗
+
+║ setup      │ nodejs-18_x                                   ║
+
+║────────────────────────────────────────────────────────────║
+
+║ caddy      │ pkgs: caddy                                   ║
+
+║            │ cmds: caddy fmt --overwrite /assets/Caddyfile ║
+
+║────────────────────────────────────────────────────────────║
+
+║ install    │ npm install                                   ║
+
+║────────────────────────────────────────────────────────────║
+
+║ build      │ npm run build                                 ║
+
+║            │ node post-build.js                            ║
+
+║────────────────────────────────────────────────────────────║
+
+║ start      │ NODE_ENV=production node dist/index.js        ║
+
+╚════════════════════════════════════════════════════════════╝
+
+[internal] load build definition from Dockerfile
+
+[internal] load build definition from Dockerfile  ✔ 0ms
+
+[internal] load build definition from Dockerfile
+
+[internal] load build definition from Dockerfile  ✔ 12ms
+
+[internal] load metadata for ghcr.io/railwayapp/nixpacks:ubuntu-1745885067
+
+[internal] load metadata for ghcr.io/railwayapp/nixpacks:ubuntu-1745885067  ✔ 61ms
+
+[internal] load .dockerignore
+
+[internal] load .dockerignore  ✔ 0ms
+
+[internal] load .dockerignore
+
+[internal] load .dockerignore  ✔ 19ms
+
+[stage-0 16/16] COPY . /app
+
+[stage-0 15/16] RUN printf '\nPATH=/app/node_modules/.bin:$PATH' >> /root/.profile
+
+[stage-0 14/16] RUN --mount=type=cache,id=s/30383ab0-61a5-44a0-8193-71dd32f88f79-node_modules/cache,target=/app/node_modules/.cache node post-build.js
+
+[stage-0 13/16] RUN --mount=type=cache,id=s/30383ab0-61a5-44a0-8193-71dd32f88f79-node_modules/cache,target=/app/node_modules/.cache npm run build
+
+[stage-0 12/16] COPY . /app/.
+
+[stage-0 11/16] RUN --mount=type=cache,id=s/30383ab0-61a5-44a0-8193-71dd32f88f79-/root/npm,target=/root/.npm npm install
+
+[stage-0 10/16] COPY . /app/.
+
+[stage-0  9/16] RUN  caddy fmt --overwrite /assets/Caddyfile
+
+[internal] load build context  ✔ 0ms
+
+[internal] load build context
+
+[internal] load build context  ✔ 215ms
+
+[stage-0 2/8] WORKDIR /app/  ✔ 0ms – CACHED
+
+[stage-0  3/16] COPY .nixpacks/nixpkgs-ba913eda2df8eb72147259189d55932012df6301.nix .nixpacks/nixpkgs-ba913eda2df8eb72147259189d55932012df6301.nix  ✔ 0ms – CACHED
+
+[stage-0  4/16] RUN nix-env -if .nixpacks/nixpkgs-ba913eda2df8eb72147259189d55932012df6301.nix && nix-collect-garbage -d  ✔ 0ms – CACHED
+
+[stage-0  5/16] COPY .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix  ✔ 0ms – CACHED
+
+[stage-0  6/16] RUN nix-env -if .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix && nix-collect-garbage -d  ✔ 0ms – CACHED
+
+[stage-0  7/16] COPY .nixpacks/assets /assets/  ✔ 0ms – CACHED
+
+[stage-0  8/16] COPY . /app/.  ✔ 0ms – CACHED

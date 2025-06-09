@@ -1,0 +1,62 @@
+Act as a senior luxury web designer and developer who has worked for brands like Alexander McQueen, Rick Owens, and Off-White. Your mission is to build a premium e-commerce website for a high-end streetwear product.
+
+#Objective:
+Build a clean, modern luxury-style website similar to https://www.alexandermcqueen.com/en-ca, but focused on a singular product — a premium EMF-protective hoodie.
+
+#Product Overview:
+- A luxury hoodie made from 100% organic cotton and German-engineered Silverell® fabric
+- Features EMF-blocking silver fiber weave
+- Designed with a minimalist ninja-tech aesthetic
+- The product is wearable wellness meets high fashion
+
+#Media & Logo:
+- Replace fashion images on Alexander McQueen’s site with the uploaded media files (modeling the hoodie). Treat them as editorial hero shots.
+- Generate a clean, modern logo for the brand using the name: *[Insert Brand Name Here]*
+    - Use minimalist serif or experimental sans-serif fonts
+    - Must convey premium, stealth, and scientific elegance
+
+#Pages to Create:
+1. *Home Page*
+    - Full-screen landing experience
+    - Large hero image from the uploaded media
+    - Product mission text: “The world’s most advanced EMF-protective hoodie. German-made Silverell® x 100% Organic Cotton.”
+    - Call to Action: “Shop Now”
+
+2. *Product Page*
+    - Name: “The EMF Hoodie”
+    - Description: Use elevated, editorial language describing wellness, fashion, and electromagnetic safety
+    - Fabric Tech Specs section (Silverell, organic cotton, made in [your location])
+    - Buy Button with price and size options
+
+3. *About Page*
+    - Brand story: A movement to shield the human nervous system from urban EMF pollution
+    - Founder note
+    - Sourcing and sustainability statement
+
+4. *Contact Page*
+    - Contact form
+    - Social links
+    - Newsletter sign-up
+
+#Design & UX:
+- Mobile-first design
+- High-contrast black-and-white palette with soft greys
+- Micro-interactions for hover, scroll, and transitions
+- Typography should be a blend of modernist elegance and underground tech aesthetic
+- Loading animations like luxury sites (fade in, slow reveals)
+
+#Technical:
+- Site should be compatible with Webflow or Framer
+- Images should be optimized for fast load
+- Responsive layout for mobile, tablet, desktop
+- E-commerce ready (Shopify integration optional)
+
+#Output:
+Export or generate:
+- Clean HTML/CSS/JS layout or Webflow project structure
+- Logo file in SVG and PNG
+- Text content block for each page
+- Placeholder product images pulled from the uploaded hoodie media
+
+#Voice:
+Speak with the tone of a high-end brand developer briefing a luxury fashion founder — confident, strategic, detail-oriented. Focus on emotion, exclusivity, and design clarity.
