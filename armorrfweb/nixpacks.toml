@@ -10,6 +10,7 @@ cmds = ['npm ci --production=false --no-audit --no-fund --legacy-peer-deps']
 [phases.build]
 cmds = [
   'npm run build',
+  'node build-server.js',
   'node post-build.js'
 ]
 
