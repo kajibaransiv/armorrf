@@ -1,8 +1,11 @@
+[variables]
+NODE_ENV = "production"
+
 [phases.setup]
 nixPkgs = ['nodejs-18_x']
 
 [phases.install]
-cmds = ['npm install']
+cmds = ['npm ci --production=false --no-audit --no-fund --legacy-peer-deps']
 
 [phases.build]
 cmds = [
@@ -11,4 +14,4 @@ cmds = [
 ]
 
 [start]
-cmd = 'NODE_ENV=production node dist/index.js'
+cmd = 'node dist/index.js'
