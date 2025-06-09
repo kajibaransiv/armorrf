@@ -1,0 +1,12 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "npm install && vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist && node post-build.js"
+  },
+  "deploy": {
+    "startCommand": "npm start",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  }
+}
