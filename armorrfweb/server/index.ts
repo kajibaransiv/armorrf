@@ -67,7 +67,12 @@ app.use((req, res, next) => {
   }
 
   // Use Railway's PORT environment variable or fallback to 5000 for development
-  const port = process.env.PORT ? parseInt(process.env.PORT) : 5000;
+  const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 5000;
+  
+  // Validate port is a valid number
+  if (isNaN(port) || port < 0 || port > 65535) {
+    throw new Error(`Invalid PORT: ${process.env.PORT}. PORT must be a number between 0 and 65535.`);
+  }
   server.listen({
     port,
     host: "0.0.0.0",
